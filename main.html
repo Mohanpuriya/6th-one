@@ -1,1 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6 Months of Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to bottom right, #ffe4ec, #ffd6e8);
+      color: #5c0040;
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      position: relative;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .message {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 182, 193, 0.5);
+      font-size: 1.2rem;
+      line-height: 1.8;
+      text-align: center;
+      z-index: 1;
+      position: relative;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .heart {
+      position: fixed;
+      top: -30px;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: floatDown 10s linear infinite;
+      opacity: 0.9;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes floatDown {
+      0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(120vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    iframe.music {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Six Months of Us 💕</h1>
+  <div class="message">
+    <p><strong>Heer, My Love, My Light</strong></p>
+    <p>Six months ago, you walked into my life, and everything changed. In your smile, I found warmth; in your eyes, I found home. You’ve brought joy into my ordinary days and turned fleeting moments into forever memories.</p>
+    <p>You are more than just beautiful — you’re my safe place, my best friend, my everything.</p>
+    <p>Every laugh, every late-night talk, every hug, has been a part of the most magical chapter of my life — and it’s just the beginning.</p>
+    <p>I adore you, Heer — endlessly, deeply, completely.</p>
+    <p>Here's to us, to our love, and to many more beautiful milestones together.</p>
+    <p><strong>Love always,<br>Yours 💕</strong></p>
+  </div>
+
+  <div class="gallery">
+    <!-- Replace these with your own images -->
+    <img src="./02fdd53c-404b-455e-8ff6-16bfb6158cda.jpg" alt="Photo 1">
+    <img src="./5d0e78d0-c575-455a-837d-ca7d5c1fa31d.jpg" alt="Photo 2">
+    <img src="./afea6b79-fef7-44f3-bf63-b3020d2d4f3d.jpg" alt="Photo 3">
+  </div>
+
+  <!-- Falling red hearts -->
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 5 + Math.random() * 5 + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 10000);
+    }
+    setInterval(createHeart, 300);
+  </script>
+
+  <!-- Background music -->
+  <audio autoplay loop>
+    <source src="./AMORE-yt.savetube.me.mp3" type="audio/mpeg" />
+  </audio>
+</body>
+</html>
 
